@@ -1,0 +1,22 @@
+/* Tailwind CSS v4 — toda a configuração fica neste arquivo (não existe tailwind.config.js) */
+@import "tailwindcss";
+
+/* Dark mode controlado por uma classe "dark" no <html> (em vez de seguir o sistema) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Paleta da escola: gera bg-escola-600, text-escola-500, hover:bg-escola-700... */
+@theme {
+  --color-escola-50: #fdf2f2;
+  --color-escola-100: #fce8e8;
+  --color-escola-400: #f87171; /* versão clara, para textos no dark mode */
+  --color-escola-500: #b91c1c;
+  --color-escola-600: #991b1b;
+  --color-escola-700: #7f1d1d;
+}
+
+/* No v4 os botões vêm com cursor padrão (seta). Voltamos para a "mãozinha". */
+@layer base {
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}
