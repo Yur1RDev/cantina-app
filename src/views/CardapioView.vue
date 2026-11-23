@@ -6,8 +6,7 @@
         const avisoAdicionado = ref('')
         let timer = null
 
-        function adicionarAoCarrinho(lanche) {
-        totalItens.value++
+        function adicionarAoCarrinho(lanche) {        
         avisoAdicionado.value = 
             `${lanche.nome} adicionado ao carrinho!`
         clearTimeout(timer)
